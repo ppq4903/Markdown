@@ -1,0 +1,172 @@
+{
+  "exam_content": [
+    {
+      "technique_id": "T1620",
+      "technique_name": "Reflective Code Loading",
+      "questions": [
+        {
+          "type": "multiple_choice",
+          "question": "反射式代码加载的主要优势是什么？",
+          "options": [
+            "A. 提高代码执行效率",
+            "B. 避免将文件写入磁盘，逃避检测",
+            "C. 增强代码可读性",
+            "D. 减少内存占用"
+          ]
+        },
+        {
+          "type": "true_false",
+          "question": "反射式代码加载必须依赖磁盘上的文件路径才能执行。"
+        },
+        {
+          "type": "fill_in_blank",
+          "question": "反射式代码加载中，PowerShell 中常用于加载原始代码的方法是______。"
+        }
+      ]
+    },
+    {
+      "technique_id": "T1055.001",
+      "technique_name": "DLL Injection",
+      "questions": [
+        {
+          "type": "multiple_choice",
+          "question": "下列哪个 API 不常用于 DLL 注入？",
+          "options": [
+            "A. VirtualAllocEx",
+            "B. WriteProcessMemory",
+            "C. LoadLibraryA",
+            "D. GetCurrentThreadId"
+          ]
+        },
+        {
+          "type": "true_false",
+          "question": "DLL 注入只能通过 CreateRemoteThread 实现。"
+        },
+        {
+          "type": "fill_in_blank",
+          "question": "在典型的 DLL 注入中，使用 ______ 函数将 DLL 路径写入目标进程内存。"
+        }
+      ]
+    },
+    {
+      "technique_id": "T1055.004",
+      "technique_name": "Asynchronous Procedure Call (APC) Injection",
+      "questions": [
+        {
+          "type": "multiple_choice",
+          "question": "APC 注入中，线程进入可警报状态的条件是什么？",
+          "options": [
+            "A. 调用 SleepEx",
+            "B. 调用 CreateThread",
+            "C. 调用 VirtualAllocEx",
+            "D. 调用 GetProcAddress"
+          ]
+        },
+        {
+          "type": "true_false",
+          "question": "APC 注入只能用于用户模式进程。"
+        },
+        {
+          "type": "fill_in_blank",
+          "question": "APC 注入中，用于将 APC 排队到目标线程的 API 是 ______。"
+        }
+      ]
+    },
+    {
+      "technique_id": "T1055.012",
+      "technique_name": "Process Hollowing",
+      "questions": [
+        {
+          "type": "multiple_choice",
+          "question": "Process Hollowing 的第一步是什么？",
+          "options": [
+            "A. 写入 Shellcode",
+            "B. 创建挂起的进程",
+            "C. 分配内存",
+            "D. 恢复线程"
+          ]
+        },
+        {
+          "type": "true_false",
+          "question": "Process Hollowing 中，合法进程的原始代码会被完全保留在内存中。"
+        },
+        {
+          "type": "fill_in_blank",
+          "question": "在 Process Hollowing 中，用于取消映射进程内存的 API 是 ______。"
+        }
+      ]
+    },
+    {
+      "technique_id": "T1055.013",
+      "technique_name": "Process Doppelgänging",
+      "questions": [
+        {
+          "type": "multiple_choice",
+          "question": "Process Doppelgänging 利用的是 Windows 的哪个特性？",
+          "options": [
+            "A. AppInit_DLLs",
+            "B. Transactional NTFS (TxF)",
+            "C. VDSO",
+            "D. Atom Table"
+          ]
+        },
+        {
+          "type": "true_false",
+          "question": "Process Doppelgänging 需要将恶意文件写入磁盘。"
+        },
+        {
+          "type": "fill_in_blank",
+          "question": "Process Doppelgänging 中，用于回滚事务的 API 是 ______。"
+        }
+      ]
+    },
+    {
+      "technique_id": "T1055.014",
+      "technique_name": "VDSO Hijacking",
+      "questions": [
+        {
+          "type": "multiple_choice",
+          "question": "VDSO 劫持主要针对哪种操作系统？",
+          "options": [
+            "A. Windows",
+            "B. Linux",
+            "C. macOS",
+            "D. Android"
+          ]
+        },
+        {
+          "type": "true_false",
+          "question": "VDSO 劫持可以通过覆盖 GOT 表中的地址实现。"
+        },
+        {
+          "type": "fill_in_blank",
+          "question": "VDSO 全称为 ______。"
+        }
+      ]
+    },
+    {
+      "technique_id": "T1055.015",
+      "technique_name": "ListPlanting",
+      "questions": [
+        {
+          "type": "multiple_choice",
+          "question": "ListPlanting 利用的是哪种 GUI 组件？",
+          "options": [
+            "A. Button",
+            "B. List-view Control",
+            "C. TextBox",
+            "D. ComboBox"
+          ]
+        },
+        {
+          "type": "true_false",
+          "question": "ListPlanting 通过直接调用 WriteProcessMemory 注入代码。"
+        },
+        {
+          "type": "fill_in_blank",
+          "question": "ListPlanting 中触发有效载荷执行的消息是 ______。"
+        }
+      ]
+    }
+  ]
+}
